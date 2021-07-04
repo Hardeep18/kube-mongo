@@ -33,6 +33,13 @@ spec:
         - name: secrets-volume
           mountPath: /etc/secrets-volume/mongosecret
           subPath: mongosecret
+        resources:
+          requests:
+            memory: "4Gi"
+            cpu: "2"
+          limits:
+            memory: "8Gi"
+            cpu: "4"
       volumes:
         - name: secrets-volume
           secret:
